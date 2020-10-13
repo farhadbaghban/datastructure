@@ -56,11 +56,11 @@ print(d[e])
 # search in arrays
 # lieaner search
 # we wanna find (35) in array
-x = 60
+x = int(input("Enter a integer Number : "))
 for i in range(len(d)):
     if d[i] == x:
         print("{} is in the array with index of {}".format(x, i))
-        print("we have find your input with {} Comparison action".format(i))
+        print("we have find your input with {} Comparison action".format(i+1))
         break
 else:
     print("Not Found,Number of Comparsion action{}".format(len(d)+1))
