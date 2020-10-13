@@ -24,7 +24,7 @@ b.sort(reverse=-1)
 print("reverse sorted array b")
 printarray(b)
 a.extend(b)
-print(exteneded a with b)
+print("exteneded a with b")
 printarray(a)
 a.insert(1, 2)
 print("inserting (2) in index(1) in a array")
@@ -47,8 +47,20 @@ print("there are {},(({})) in this array".format(x, c))
 d = a.copy()
 printarray(d)
 a.clear()
-print(cleared a array)
+print("cleared a array")
 printarray(a)
 e = slice(0, len(d), 2)
 print("slieced d array with step 2 ")
 print(d[e])
+
+# search in arrays
+# lieaner search
+# we wanna find (35) in array
+x = 60
+for i in range(len(d)):
+    if d[i] == x:
+        print("{} is in the array with index of {}".format(x, i))
+        print("we have find your input with {} Comparison action".format(i))
+        break
+else:
+    print("Not Found,Number of Comparsion action{}".format(len(d)+1))
