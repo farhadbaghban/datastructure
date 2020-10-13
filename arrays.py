@@ -8,6 +8,27 @@ def printarray(arrays):
     print()
 
 
+def Insert(arr, m, k, x):
+    for i in range(int(m-1), k, -1):
+        arr[i+1] = arr[i]
+    a[k] = x
+    return True
+
+
+def binarySearch(arr, low, high, x, com_act):
+    com_act += 1
+    if high >= low:
+        mid = int((low+high)/2)
+        if arr[mid] == x:
+            return mid, com_act
+        elif arr[mid] > x:
+            return binarySearch(arr, low, mid-1, x, com_act)
+        elif arr[mid] < x:
+            return binarySearch(arr, mid+1, high, x, com_act)
+    elif low > high:
+        return binarySearch(arr, high, low, x, com_act)
+
+
 a = [1, 2, 3]
 b = [9, 12, 35, 4]
 printarray(a)
@@ -55,22 +76,7 @@ print(d[e])
 
 # search in arrays
 # lieaner search
-
 # define Binary search
-
-
-def binarySearch(arr, low, high, x, com_act):
-    com_act += 1
-    if high >= low:
-        mid = int((low+high)/2)
-        if arr[mid] == x:
-            return mid, com_act
-        elif arr[mid] > x:
-            return binarySearch(arr, low, mid-1, x, com_act)
-        elif arr[mid] < x:
-            return binarySearch(arr, mid+1, high, x, com_act)
-    elif low > high:
-        return binarySearch(arr, high, low, x, com_act)
 
 
 select = int(
@@ -91,4 +97,12 @@ elif select == 2:
 
 else:
     print("Worng Selecting Number")
-# binary Search
+
+
+a = [None] * 10
+x = int(input("Enter a int number for add in array : "))
+y = 0
+y = int(input("Enter a int number for index : "))
+
+if (Insert(a, 0, y, x)):
+    print(a)
