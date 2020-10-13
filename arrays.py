@@ -55,12 +55,40 @@ print(d[e])
 
 # search in arrays
 # lieaner search
-# we wanna find (35) in array
+
+# define Binary search
+
+
+def binarySearch(arr, low, high, x, com_act):
+    com_act += 1
+    if high >= low:
+        mid = int((low+high)/2)
+        if arr[mid] == x:
+            return mid, com_act
+        elif arr[mid] > x:
+            return binarySearch(arr, low, mid-1, x, com_act)
+        elif arr[mid] < x:
+            return binarySearch(arr, mid+1, high, x, com_act)
+    elif low > high:
+        return binarySearch(arr, high, low, x, com_act)
+
+
+select = int(
+    input("please Select type of search (1)->linear  &&  (2)->(binary)"))
 x = int(input("Enter a integer Number : "))
-for i in range(len(d)):
-    if d[i] == x:
-        print("{} is in the array with index of {}".format(x, i))
-        print("we have find your input with {} Comparison action".format(i+1))
-        break
+if select == 1:
+    for i in range(len(d)):
+        if d[i] == x:
+            print("{} is in the array with index of {}".format(x, i))
+            print("we have find your input with {} Comparison action".format(i+1))
+            break
+    else:
+        print("Not Found,Number of Comparsion action{}".format(len(d)+1))
+elif select == 2:
+    num, com = binarySearch(d, 0, len(d)-1, x, 0)
+    print("{} is in the array with index of {}".format(x, num))
+    print("we have find your input with {} Comparison action".format(com))
+
 else:
-    print("Not Found,Number of Comparsion action{}".format(len(d)+1))
+    print("Worng Selecting Number")
+# binary Search
