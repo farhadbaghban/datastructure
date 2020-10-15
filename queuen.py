@@ -5,6 +5,7 @@ class Queue:
 
     def isEmpty(self):
         return self.items == []
+    # i used the isert because, ican pick where the value will be added
 
     def enqueue(self, item):
         self.items.insert(0, item)
