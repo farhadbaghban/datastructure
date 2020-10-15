@@ -22,3 +22,23 @@ class Stack:
 
     def size(self):
         return len(self.items)
+
+
+stack = Stack()
+print(stack.isEmpty())
+stack.push(2)
+stack.push('tiger')
+stack.push('egg')
+stack.push(23)
+stack.push(False)
+print(stack.isEmpty())
+print(stack.size())
+print("____________")
+print(stack.peek())
+stack.pop()
+print("____________")
+print(stack.peek())
+print("____________")
+
+print(stack.size())
+print("____________")
