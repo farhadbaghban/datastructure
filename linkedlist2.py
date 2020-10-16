@@ -61,3 +61,16 @@ class doubly_linked_list:
             lastnode.nextval = nextnode
             nextnode.pervval = lastnode
             headNode = None
+
+
+dllist = doubly_linked_list()
+dllist.AtBegining(12)
+dllist.AtBegining("Ali")
+dllist.AtEnd(True)
+dllist.AtBegining(7.23)
+dllist.Inbetween(5.69, "Ali")
+dllist.Inbetween(False, 12)
+dllist.listprint()
+print("________")
+dllist.RemoveNode(12)
+dllist.listprint()
