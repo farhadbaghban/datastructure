@@ -60,3 +60,6 @@ root.insert(11)
 root.PrintTree()
 print("________-")
 root.PrintRoot()
+
+print("________-")
+print(root.SearchIn(16))
