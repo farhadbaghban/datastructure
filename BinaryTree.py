@@ -25,6 +25,18 @@ class TreeNode:
         else:
             self.data = data
 
+    def SearchIn(self, data):
+        if self.data < data:
+            if self.rightChild is None:
+                return str(data)+"Not Found"
+            return self.rightChild.SearchIn(data)
+        elif self.data > data:
+            if self.leftChild is None:
+                return str(data)+"Not Found"
+            return self.leftChild.SearchIn(data)
+        else:
+            return str(self.data)+" Is Found"
+
     def PrintTree(self):
         if self.leftChild:
             self.leftChild.PrintTree()
