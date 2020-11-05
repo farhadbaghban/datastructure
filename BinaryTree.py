@@ -46,20 +46,3 @@ class TreeNode:
 
     def PrintRoot(self):
         print(self.data)
-
-
-root = TreeNode(12)
-root.insert(6)
-root.insert(14)
-root.insert(3)
-
-root.insert(16)
-root.insert(13)
-root.insert(11)
-
-root.PrintTree()
-print("________-")
-root.PrintRoot()
-
-print("________-")
-print(root.SearchIn(16))
